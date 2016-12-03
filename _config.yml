@@ -1,23 +1,23 @@
 # Site settings
-email: "mukminL4@gmail.com"
-baseurl: "matsom"
+email: mukminL4@gmail.com
+baseurl: /
 paginate: 5
 paginate_path: "/blog/page-:num"
 google_analytics: 
 
 # SEO settings
-title: "Bukan Blog Makwe"
-description: "Hello World?"
+title: Bukan Blog Makwe
+description: Hello World
 url: ""
-twitter_username: "@mukmin_l4"
+twitter_username: @mukmin_l4
 default_img: 
 
 # Profile settings
-name: "Mat Som"
+name: Mat Som
 profile_img: 
-profile: "Ninja to your heart"
+profile: Ninja to your heart
 social: 
-  github: "MinggHo"
+  github: MinggHo
 
 # Build settings
 include: ["_categories"]
