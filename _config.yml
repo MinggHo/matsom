@@ -17,8 +17,8 @@ name: "Mukmin Abd. Samad"
 profile_img: "/matsom/assets/images/matsom.jpg"
 profile: "Dev."
 social: 
-  github: "MinggHo"
-  facebook: "MyFB"
+  github: "https://github.com/MinggHo"
+  facebook-official: "www.facebook.com/mukmin.abdsamad"
 
 # Build settings
 include: ["_categories"]
