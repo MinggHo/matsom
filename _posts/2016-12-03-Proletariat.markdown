@@ -11,6 +11,8 @@ image-sm: https://images.unsplash.com/photo-1472087982327-49192446ed6b?dpr=1&aut
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/uM4m-TwMURM" frameborder="0" allowfullscreen></iframe>
 
+<br />
+
 Kita semua adalah hamba, pada benda yang kita fikir kita adalah tuan.
 Jauh mana kita menjadi hamba, pakailah helm proyek.
 demi keselamatan kalian sendiri.
