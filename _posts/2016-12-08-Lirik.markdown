@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Lirik"
+date: 2016-12-08
+categories:
+  - Tunanetra
+description: 
+image: https://images.unsplash.com/photo-1464142220903-5c48913da550?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80
+image-sm: https://images.unsplash.com/photo-1464142220903-5c48913da550?dpr=1&auto=format&fit=crop&w=500&h=300&q=80
+---
+Sebagaimana sebuah kamera berfungsi merakam segala macam perkara, begitu juga dengan ciptaan yang Esa dengan mata.
+Pelbagai kisah, dogengan, realiti dan momen yang harus dirakam dengan mata.
+<br>
+Dan pada setiap lirikan itu dijadikan sebuah paparan gambar pada otak yang akan diputarkan pada kadar rawak pada sepanjang kehidupan kita.
+Dan ada setengah paparan itu sengaja dibiarkan terus berputar, kerna ianya asyik, ianya emosional, ianya penuh imiginatif dan sentimental.
+<br>
