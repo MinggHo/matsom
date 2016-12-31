@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pada Hari Paling Menggi­rang­­kan"
-date: 2016-12-eq
+date: 2016-12-31
 categories:
   - Tunanetra
 description: 
