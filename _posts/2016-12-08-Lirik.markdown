@@ -21,4 +21,4 @@ Dan ada setengah paparan itu sengaja dibiarkan terus berputar, kerna ianya asyik
 <br>
 <br>
 
-<iframe width="560" height="480" src="https://www.youtube.com/embed/SJmmaIGiGBg" frameborder="0" allowfullscreen></iframe>
+<iframe width="750" height="480" src="https://www.youtube.com/embed/SJmmaIGiGBg" frameborder="0" allowfullscreen></iframe>
