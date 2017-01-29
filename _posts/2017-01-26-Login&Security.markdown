@@ -21,10 +21,10 @@ Pada pandangan saya, perkara ini boleh dikategorikan kepada dua; 1) Ciri Keselam
 Data yang digunakan semasa log masuk merupakan data yang sensitif dan seharusnya dilindungi.
 Mengikut laman web [OWASP](http://www.owasp.org/index.php/Authentication_Cheat_Sheet "OWASP"), perkara berikut merupakan beberapa element yang patut dilaksanakan.
 
- 1. Case insensitive - User bernama 'fauzan' dan 'Fauzan' merupakan pengguna yang sama.
- 2. Email as user ID - Penggunaan email sebagai username semakin banyak diguna-pakai.
- 3. Password length - Panjang password perlulah diletakkan minimum (8 atau 10 character) dan maximum (128 character).
- 4. Password complexity - Campuran penggunaan huruf kecil dan besar (a-Z) , nombor (0-9) serta simbol atau [special character](http://www.owasp.org/index.php/Password_special_characters).
+ * Case insensitive - User bernama 'fauzan' dan 'Fauzan' merupakan pengguna yang sama.
+ * Email as user ID - Penggunaan email sebagai username semakin banyak diguna-pakai.
+ * Password length - Panjang password perlulah diletakkan minimum (8 atau 10 character) dan maximum (128 character).
+ * Password complexity - Campuran penggunaan huruf kecil dan besar (a-Z) , nombor (0-9) serta simbol atau [special character](http://www.owasp.org/index.php/Password_special_characters).
 
 Laman [Vertabelo - How to store authentication data](http://www.vertabelo.com/blog/technical-articles/how-to-store-authentication-data-in-a-database-part-1),
 menerangkan cara penyimpanan data dan salah satu perkara yang disentuh adalah Hash the password.
@@ -37,9 +37,7 @@ Dengan menggunakan perkara-perkara diatas, perkara 1) dapat diselesaikan.
 
 Code suggestion :-
 
-
-[code language="php"]
-```php
+```
 <?php
 
       //dua variable yang akan di-hash
@@ -69,6 +67,4 @@ Code suggestion :-
       echo 'password tidak sama';
 
       }
-
-```
-[/code]
+```      
