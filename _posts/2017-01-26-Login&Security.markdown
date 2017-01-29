@@ -4,7 +4,7 @@ title: "Login & Security"
 date: 2017-01-26
 categories:
   - Sharing
-description: 
+description: Software Development about Login and Security
 image: https://images.unsplash.com/photo-1468070454955-c5b6932bd08d?dpr=1&auto=format&fit=crop&w=1500&h=860&q=80
 image-sm: https://images.unsplash.com/photo-1468070454955-c5b6932bd08d?dpr=1&auto=format&fit=crop&w=500&h=300&q=80
 ---
@@ -19,24 +19,26 @@ password. Jadi bagaimana menghasilkan sebuah proses log masuk yang bermutu? yang
 Pada pandangan saya, perkara ini boleh dikategorikan kepada dua; 1) Ciri Keselamatan 2) Cara Simpanan Data.
 
 Data yang digunakan semasa log masuk merupakan data yang sensitif dan seharusnya dilindungi.
-Mengikut laman web [OWASP](www.owasp.org/index.php/Authentication_Cheat_Sheet "OWASP"), perkara berikut merupakan beberapa element yang patut dilaksanakan.
+Mengikut laman web [OWASP](http://www.owasp.org/index.php/Authentication_Cheat_Sheet "OWASP"), perkara berikut merupakan beberapa element yang patut dilaksanakan.
 
  1. Case insensitive - User bernama 'fauzan' dan 'Fauzan' merupakan pengguna yang sama.
  2. Email as user ID - Penggunaan email sebagai username semakin banyak diguna-pakai.
  3. Password length - Panjang password perlulah diletakkan minimum (8 atau 10 character) dan maximum (128 character).
- 4. Password complexity - Campuran penggunaan huruf kecil dan besar (a-Z) , nombor (0-9) serta simbol atau [special character](www.owasp.org/index.php/Password_special_characters).
+ 4. Password complexity - Campuran penggunaan huruf kecil dan besar (a-Z) , nombor (0-9) serta simbol atau [special character](http://www.owasp.org/index.php/Password_special_characters).
 
-Laman [Vertabelo - How to store authentication data](www.vertabelo.com/blog/technical-articles/how-to-store-authentication-data-in-a-database-part-1),
+Laman [Vertabelo - How to store authentication data](http://www.vertabelo.com/blog/technical-articles/how-to-store-authentication-data-in-a-database-part-1),
 menerangkan cara penyimpanan data dan salah satu perkara yang disentuh adalah Hash the password.
 
 PHP telah menyediakan fungsi [*password_hash*](http://php.net/manual/en/function.password-hash.php) yang menukarkan ayat - string - kepada sebuah aksara berpanjang maksimum 72 aksara.
-Penggunaan fungsi ini sangat bagus, [Hashing vs Encrypting](www.darkreading.com/safely-storing-user-passwords-hashing-vs-encrypting/a/d-id/1269374)
+Penggunaan fungsi ini sangat bagus, [Hashing vs Encrypting](http://www.darkreading.com/safely-storing-user-passwords-hashing-vs-encrypting/a/d-id/1269374)
 menerangkan penggunaan hashing adalah lebih bagus berbanding encrypting.
 
 Dengan menggunakan perkara-perkara diatas, perkara 1) dapat diselesaikan.
 
-Code suggestion
+Code suggestion :-
 
+
+[code language="php"]
 ```php
 <?php
 
@@ -69,3 +71,4 @@ Code suggestion
       }
 
 ```
+[/code]
