@@ -16,15 +16,19 @@ di dalam database berdasarkan ketetapan pengguna.
 Rule of thumb, proses log masuk hanya memerlukan dua perkara; Username (boleh jadi email atau id yang unik) dan juga
 password. Jadi bagaimana menghasilkan sebuah proses log masuk yang bermutu? yang berkualiti tinggi ?
 
-Pada pandangan saya, perkara ini boleh dikategorikan kepada dua; 1) Ciri Keselamatan 2) Cara Simpanan Data.
+Pada pandangan saya, perkara ini boleh dikategorikan kepada dua; 
+1) Ciri Keselamatan 
+2) Cara Simpanan Data.
 
 Data yang digunakan semasa log masuk merupakan data yang sensitif dan seharusnya dilindungi.
 Mengikut laman web [OWASP](http://www.owasp.org/index.php/Authentication_Cheat_Sheet "OWASP"), perkara berikut merupakan beberapa element yang patut dilaksanakan.
 
- * Case insensitive - User bernama 'fauzan' dan 'Fauzan' merupakan pengguna yang sama.
- * Email as user ID - Penggunaan email sebagai username semakin banyak diguna-pakai.
- * Password length - Panjang password perlulah diletakkan minimum (8 atau 10 character) dan maximum (128 character).
- * Password complexity - Campuran penggunaan huruf kecil dan besar (a-Z) , nombor (0-9) serta simbol atau [special character](http://www.owasp.org/index.php/Password_special_characters).
+
+* __Case insensitive__: User bernama 'fauzan' dan 'Fauzan' merupakan pengguna yang sama.
+* __Email as user ID__: Penggunaan email sebagai username semakin banyak diguna-pakai.
+* __Password length__: Panjang password perlulah diletakkan minimum (8 atau 10 character) dan maximum (128 character).
+* __Password complexity__: Campuran penggunaan huruf kecil dan besar (a-Z) , nombor (0-9) serta simbol atau [special character](http://www.owasp.org/index.php/Password_special_characters).
+
 
 Laman [Vertabelo - How to store authentication data](http://www.vertabelo.com/blog/technical-articles/how-to-store-authentication-data-in-a-database-part-1),
 menerangkan cara penyimpanan data dan salah satu perkara yang disentuh adalah Hash the password.
@@ -35,36 +39,45 @@ menerangkan penggunaan hashing adalah lebih bagus berbanding encrypting.
 
 Dengan menggunakan perkara-perkara diatas, perkara 1) dapat diselesaikan.
 
-Code suggestion :-
+Berikut merupakan code yang boleh digunakan untuk menyimpan password secara hash.
+Code suggestion (PHP) :-
 
-```
+```PHP
 <?php
+//Variable yang akan di-hash (password pengguna)
+$string_password = 'passwordsaya123';
 
-      //dua variable yang akan di-hash
-      $string_password = 'passwordsaya123';
-      
-      //Hash password menggunakan format BCRYPT & fungsi password_hash()
-      $hashed_password = password_hash($string_password, PASSWORD_BCRYPT);
+//Hash password menggunakan format BCRYPT & fungsi password_hash()
+$hashed_password = password_hash($string_password, PASSWORD_BCRYPT);
 
-      //php akan mengubah $string_password kepada $2y$10$hrT7ZPYuK3IaHwKTDNJ9D.xUf6iTuha0rRUGIsYwEyNfze/l82DXK
-      //dengan length 60 character.
-      //$hashed_password yang sudah di-Hash akan disimpan ke dalam database.
+/*
+* php akan mengubah $string_password kepada 
+* $2y$10$hrT7ZPYuK3IaHwKTDNJ9D.xUf6iTuha0rRUGIsYwEyNfze/l82DXK
+* dengan length 60 character.
+* $hashed_password yang sudah di-Hash akan disimpan ke dalam database.
+*/
 
-      //Cara untuk melihat sekiranya password yang dihash sama atau tidak
-      //$value_from_DB merupakan password dari Database dan $value_from_user input dari user
+/*
+* Cara untuk melihat sekiranya password yang dihash sama atau tidak
+* $value_from_DB merupakan password dari Database dan $value_from_user input dari user
+*/
 
-      password_verify($value_from_user, $value_from_DB)
+password_verify($value_from_user, $value_from_DB)
 
-      //password_verify akan return TRUE atau FALSE value
-      //dan sangat sesuai untuk membuat If/Else
+/*
+* password_verify akan return TRUE atau FALSE value
+* dan sangat sesuai untuk membuat If/Else
+*/
 
-      if (password_verify($value_from_user, $value_from_DB)) {
-      //return TRUE jika password sama
-      echo 'password sama';
+if (password_verify($value_from_user, $value_from_DB)) {
 
-      } else {
-      //return FALSE jika password tidak sama
-      echo 'password tidak sama';
+//return TRUE jika password sama
+echo 'password sama';
 
-      }
-```      
+} else {
+
+//return FALSE jika password tidak sama
+echo 'password tidak sama';
+
+}
+```   
