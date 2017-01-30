@@ -24,10 +24,10 @@ Data yang digunakan semasa log masuk merupakan data yang sensitif dan seharusnya
 Mengikut laman web [OWASP](http://www.owasp.org/index.php/Authentication_Cheat_Sheet "OWASP"), perkara berikut merupakan beberapa element yang patut dilaksanakan.
 
 
-* __Case insensitive__: User bernama 'fauzan' dan 'Fauzan' merupakan pengguna yang sama.
-* __Email as user ID__: Penggunaan email sebagai username semakin banyak diguna-pakai.
-* __Password length__: Panjang password perlulah diletakkan minimum (8 atau 10 character) dan maximum (128 character).
-* __Password complexity__: Campuran penggunaan huruf kecil dan besar (a-Z) , nombor (0-9) serta simbol atau [special character](http://www.owasp.org/index.php/Password_special_characters).
+1. __Case insensitive__: User bernama 'fauzan' dan 'Fauzan' merupakan pengguna yang sama.
+2. __Email as user ID__: Penggunaan email sebagai username semakin banyak diguna-pakai.
+3. __Password length__: Panjang password perlulah diletakkan minimum (8 atau 10 character) dan maximum (128 character).
+4. __Password complexity__: Campuran penggunaan huruf kecil dan besar (a-Z) , nombor (0-9) serta simbol atau [special character](http://www.owasp.org/index.php/Password_special_characters).
 
 
 Laman [Vertabelo - How to store authentication data](http://www.vertabelo.com/blog/technical-articles/how-to-store-authentication-data-in-a-database-part-1),
@@ -38,10 +38,10 @@ Penggunaan fungsi ini sangat bagus, [Hashing vs Encrypting](http://www.darkreadi
 menerangkan penggunaan hashing adalah lebih bagus berbanding encrypting.
 
 Dengan menggunakan perkara-perkara diatas, perkara 1) dapat diselesaikan.
-
 Berikut merupakan code yang boleh digunakan untuk menyimpan password secara hash.
 Code suggestion (PHP) :-
 
+######
 ```PHP
 <?php
 //Variable yang akan di-hash (password pengguna)
@@ -80,4 +80,5 @@ echo 'password sama';
 echo 'password tidak sama';
 
 }
-```   
+```
+######
