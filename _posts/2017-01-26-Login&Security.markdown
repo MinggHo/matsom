@@ -41,8 +41,8 @@ Dengan menggunakan perkara-perkara diatas, perkara 1) dapat diselesaikan.
 Berikut merupakan code yang boleh digunakan untuk menyimpan password secara hash.
 Code suggestion (PHP) :-
 
-<pre>
-```PHP
+<pre style="font-size: 0.7em;">
+
 <?php
 //Variable yang akan di-hash (password pengguna)
 $string_password = 'passwordsaya123';
@@ -81,7 +81,7 @@ echo 'password sama';
 echo 'password tidak sama';
 
 }
-```
+
 </pre>
 
 Bersambung...
